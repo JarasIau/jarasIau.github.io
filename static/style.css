@@ -16,6 +16,21 @@ body {
   align-items: center;
 }
 
+.menu-icon {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  color: white;
+  font-size: 24px;
+  text-decoration: none;
+  transition: color 0.3s ease;
+  z-index: 1000;
+}
+
+.menu-icon:hover {
+  color: #e22000;
+}
+
 .main-container {
   display: flex;
   flex-direction: column;
@@ -162,5 +177,158 @@ body {
 @media (max-width: 768px) {
   .line {
     width: 100%;
+  }
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.9);
+  z-index: 2000;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-content {
+  background: #1a1a1a;
+  border: 2px solid #e22000;
+  border-radius: 10px;
+  padding: 40px;
+  max-width: 800px;
+  width: 90%;
+  max-height: 80vh;
+  overflow-y: auto;
+  position: relative;
+}
+
+.close-btn {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  color: white;
+  font-size: 28px;
+  text-decoration: none;
+  transition: color 0.3s ease;
+  z-index: 2001;
+}
+
+.close-btn:hover {
+  color: #e22000;
+}
+
+.modal-body {
+  color: white;
+  font-family: "Open Sans", Arial, Helvetica, sans-serif;
+}
+
+.modal-body h2 {
+  font-size: 32px;
+  margin-bottom: 30px;
+  color: #e22000;
+  text-align: center;
+}
+
+.modal-body h3 {
+  font-size: 24px;
+  color: #e22000;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.section {
+  margin-bottom: 35px;
+}
+
+.item {
+  margin-bottom: 25px;
+  padding-left: 15px;
+  border-left: 3px solid #e22000;
+}
+
+.item-title {
+  font-size: 20px;
+  font-weight: bold;
+  color: white;
+  margin-bottom: 5px;
+}
+
+.item-subtitle {
+  font-size: 18px;
+  color: #cccccc;
+  margin-bottom: 3px;
+}
+
+.item-date {
+  font-size: 16px;
+  color: #e22000;
+  margin-bottom: 10px;
+  font-style: italic;
+}
+
+.item-description {
+  font-size: 16px;
+  color: #aaaaaa;
+  line-height: 1.5;
+}
+
+.skills-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.skill-tag {
+  background: #2a2a2a;
+  color: white;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: 16px;
+  border: 1px solid #e22000;
+  transition: all 0.3s ease;
+}
+
+.skill-tag:hover {
+  background: #e22000;
+  transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+  .modal-content {
+    padding: 30px 20px;
+  }
+
+  .modal-body h2 {
+    font-size: 24px;
+  }
+
+  .modal-body h3 {
+    font-size: 20px;
+  }
+
+  .item-title {
+    font-size: 18px;
+  }
+
+  .item-subtitle {
+    font-size: 16px;
+  }
+
+  .item-date {
+    font-size: 14px;
+  }
+
+  .item-description {
+    font-size: 14px;
+  }
+
+  .skill-tag {
+    font-size: 14px;
+    padding: 6px 12px;
   }
 }

@@ -12,6 +12,77 @@
     <link rel="stylesheet" href="static/style.css" />
   </head>
   <body>
+    <a href="#" class="menu-icon" id="menuBtn">
+      <i class="fa fa-bars"></i>
+    </a>
+
+    <div id="modal" class="modal">
+      <div class="modal-content">
+        <a href="#" class="close-btn" id="closeBtn">
+          <i class="fa fa-times"></i>
+        </a>
+        <div class="modal-body">
+          <h2>About Me</h2>
+
+          <div class="section">
+            <h3><i class="fas fa-graduation-cap"></i> Education</h3>
+            <div class="item">
+              <p class="item-title">Computer Science</p>
+              <p class="item-subtitle">University of Łódź</p>
+              <p class="item-date">2025 - Present</p>
+              <p class="item-description">
+                Wydział Fizyki i Informatyki Stosowanej
+              </p>
+            </div>
+          </div>
+
+          <div class="section">
+            <h3><i class="fas fa-briefcase"></i> Experience</h3>
+            <div class="item">
+              <p class="item-title">Combinario</p>
+              <p class="item-subtitle">Personal project</p>
+              <p class="item-date">2026 - Present</p>
+              <p class="item-description">
+                FastAPI, Redis, SQLAlchemy, Docker, llama.cpp
+              </p>
+            </div>
+            <div class="item">
+              <p class="item-title">Sonia-Emu</p>
+              <p class="item-subtitle">Personal project</p>
+              <p class="item-date">2025 - Present</p>
+              <p class="item-description">FastAPI, Rust, Linux input events</p>
+            </div>
+          </div>
+
+          <div class="section">
+            <h3><i class="fas fa-code"></i> Skills</h3>
+            <div class="skills-grid">
+              <span class="skill-tag"
+                ><i class="fab fa-python"></i> Python</span
+              >
+              <span class="skill-tag"><i class="fas fa-bolt"></i> FastAPI</span>
+              <span class="skill-tag"><i class="fas fa-flask"></i> Flask</span>
+              <span class="skill-tag"><i class="fab fa-linux"></i> Linux</span>
+              <span class="skill-tag"><i class="fab fa-git-alt"></i> Git</span>
+              <span class="skill-tag"
+                ><i class="fab fa-docker"></i> Docker</span
+              >
+              <span class="skill-tag"
+                ><i class="fas fa-database"></i> SQLAlchemy</span
+              >
+              <span class="skill-tag"
+                ><i class="fas fa-check-circle"></i> Pydantic</span
+              >
+              <span class="skill-tag"><i class="fas fa-book"></i> Poetry</span>
+              <span class="skill-tag"
+                ><i class="fas fa-bolt"></i> Redis (rq/arq)</span
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <div class="main-container">
       <div class="profile-container">
         <a
@@ -54,5 +125,6 @@
         </a>
       </div>
     </div>
+    <script src="static/modal.js"></script>
   </body>
 </html>
