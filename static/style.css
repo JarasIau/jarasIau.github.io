@@ -282,6 +282,7 @@ body {
   height: 50px;
   object-fit: contain;
   flex-shrink: 0;
+  user-select: none;
 }
 
 .skills-grid {
