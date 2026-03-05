@@ -31,6 +31,26 @@ body {
   color: #e22000;
 }
 
+.menu-toast {
+  position: fixed;
+  top: 22px;
+  left: 52px;
+  color: white;
+  font-family: "Open Sans", Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  font-weight: normal;
+  pointer-events: none;
+  opacity: 1;
+  animation: toastFade 0.4s ease 2.5s forwards;
+  z-index: 1000;
+  white-space: nowrap;
+}
+
+@keyframes toastFade {
+  0% { opacity: 1; }
+  100% { opacity: 0; }
+}
+
 .main-container {
   display: flex;
   flex-direction: column;
