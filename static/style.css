@@ -285,6 +285,21 @@ body {
   user-select: none;
 }
 
+.demo {
+  display: inline-flex;
+  width: fit-content;
+}
+
+.demo img {
+  transition: transform 0.2s ease;
+}
+
+.demo:hover img {
+  filter: brightness(0) saturate(100%) invert(18%) sepia(96%) saturate(7462%)
+    hue-rotate(358deg) brightness(93%) contrast(119%);
+  transform: scale(1.1);
+}
+
 .item a {
   color: #fff;
   text-decoration: none;
@@ -346,7 +361,7 @@ body {
   .item-description {
     font-size: 14px;
   }
-  
+
   .item-logo {
     width: 40px;
     height: 40px;
