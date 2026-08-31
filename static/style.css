@@ -582,10 +582,17 @@ img {
 
 .projects-content {
   position: relative;
+  width: min(90%, calc(100% - 180px));
   max-width: 980px;
-  max-height: 90vh;
-  overflow-y: hidden;
+  max-height: none;
+  overflow: clip visible;
   padding-bottom: 18px;
+}
+
+#section-2 {
+  height: auto;
+  min-height: 100dvh;
+  overflow: visible;
 }
 
 .lineup {
@@ -1110,7 +1117,8 @@ img {
 
   .projects-content {
     height: auto;
-    overflow: hidden;
+    max-height: none;
+    overflow: clip visible;
     padding-bottom: 0;
   }
 
