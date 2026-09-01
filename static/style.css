@@ -598,6 +598,7 @@ img {
 .lineup {
   display: flex;
   gap: 14px;
+  cursor: grab;
   overflow-x: auto;
   overflow-y: hidden;
   scroll-padding-left: 90px;
@@ -605,6 +606,12 @@ img {
   scrollbar-width: none;
   padding: 6px 90px 18px;
   margin: 0 -90px;
+}
+
+.lineup.is-dragging {
+  cursor: grabbing;
+  scroll-snap-type: none;
+  user-select: none;
 }
 
 .lineup::-webkit-scrollbar {

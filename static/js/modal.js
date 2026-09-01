@@ -79,6 +79,46 @@ positionProjectCharges();
 lineup?.addEventListener("scroll", positionProjectCharges, { passive: true });
 window.addEventListener("resize", positionProjectCharges);
 
+if (lineup) {
+  let startX;
+  let startScrollLeft;
+  let dragged = false;
+
+  lineup.addEventListener("pointerdown", (event) => {
+    if (event.button !== 0 || event.pointerType === "touch") return;
+    startX = event.clientX;
+    startScrollLeft = lineup.scrollLeft;
+    dragged = false;
+    lineup.setPointerCapture(event.pointerId);
+    lineup.classList.add("is-dragging");
+  });
+
+  lineup.addEventListener("pointermove", (event) => {
+    if (!lineup.hasPointerCapture(event.pointerId)) return;
+    const distance = event.clientX - startX;
+    dragged ||= Math.abs(distance) > 4;
+    lineup.scrollLeft = startScrollLeft - distance;
+  });
+
+  lineup.addEventListener("pointerup", (event) => {
+    if (!lineup.hasPointerCapture(event.pointerId)) return;
+    lineup.releasePointerCapture(event.pointerId);
+    lineup.classList.remove("is-dragging");
+    setTimeout(() => (dragged = false));
+  });
+
+  lineup.addEventListener("pointercancel", () => {
+    lineup.classList.remove("is-dragging");
+    dragged = false;
+  });
+
+  lineup.addEventListener("click", (event) => {
+    if (!dragged) return;
+    event.preventDefault();
+    event.stopPropagation();
+  });
+}
+
 document.querySelectorAll(".item-stack-toggle").forEach((button) => {
   const stack = document.getElementById(button.getAttribute("aria-controls"));
   const label = button.querySelector("span");
