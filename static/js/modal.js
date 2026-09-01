@@ -85,7 +85,12 @@ if (lineup) {
   let dragged = false;
 
   lineup.addEventListener("pointerdown", (event) => {
-    if (event.button !== 0 || event.pointerType === "touch") return;
+    if (
+      event.button ||
+      event.pointerType === "touch" ||
+      event.target.closest("a")
+    )
+      return;
     startX = event.clientX;
     startScrollLeft = lineup.scrollLeft;
     dragged = false;
